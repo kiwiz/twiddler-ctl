@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=80.9"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "twiddler_ctl"
+version = "0.1.0"
+description = "Manage Twiddler v7 configs"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "layouts>=0.4.10",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.12.12",
+]
+
+[project.scripts]
+twiddler-ctl = "twiddler_ctl.__main__:main"
