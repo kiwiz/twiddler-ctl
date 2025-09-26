@@ -20,6 +20,28 @@ pipx install twiddler-ctl
 
 ## Usage
 
+### Manipulating configuration files
+
+**To Text**:
+
+```bash
+twiddler-ctl convert input.cfg output.txt
+```
+
+**To Binary**:
+
+```bash
+twiddler-ctl convert input.txt output.cfg
+```
+
+
+### Visualize configuration file
+
+```bash
+twiddler-ctl visualize input.cfg
+```
+
+
 ### Sync configurations
 
 * Copy `config.sample.ini` and rename to `config.ini`
