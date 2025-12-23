@@ -46,7 +46,7 @@ def sync_command(args: argparse.Namespace) -> None:
             with open(fn, "rb") as fh:
                 new = fh.read()
         else:
-            fh, des = open_config(fn, None, "r")
+            fh, des = open_config(Path(fn), None, "r")
             with fh:
                 config = des.read(fh, layout)
             buf = io.BytesIO()

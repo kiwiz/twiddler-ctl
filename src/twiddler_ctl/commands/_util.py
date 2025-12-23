@@ -18,10 +18,10 @@ def detect_format(path: Path) -> str:
     return "text"
 
 
-def open_config(path: Path, fmt: str | None, mode: str) -> tuple[Serdes, io.FileIO]:
+def open_config(path: Path, fmt: str | None, mode: str) -> tuple[io.FileIO, Serdes]:
     binary, cls = FORMAT_MAP[fmt or detect_format(path)]
 
     if binary:
         mode += "b"
 
-    return cls, open(path, mode)
+    return open(path, mode), cls
