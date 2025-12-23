@@ -112,9 +112,12 @@ SYSTEM_COMMANDS: dict[str, int] = {
     "cycle_config": 0x0E,
     "cycle_bluetooth_host": 0x0F,
     "cycle_nav_mode": 0x10,
-    "select_config": 0x11,
+    "select_config_0": 0x11,
     "select_bluetooth_host": 0x12,
     "select_nav_mode": 0x13,
+    "select_config_1": 0x111,
+    "select_config_2": 0x211,
+    "select_config_3": 0x311,
 }
 SYSTEM_CODES: dict[int, str] = {v: k for k, v in SYSTEM_COMMANDS.items()}
 
